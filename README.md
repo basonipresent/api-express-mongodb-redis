@@ -15,4 +15,25 @@ Npm 6.14.4              -Latest
 `npm init`
 
 ## install dependencies
-`npm install express helmet dotenv winston rotating-file-stream --save-dev`
+`npm install express mongoose redis helmet dotenv winston rotating-file-stream --save-dev`
+
+## create structure project
+> logs
+> src
+>> app
+>>> app.js
+>>> config.js
+>> controllers
+>> db
+>>> index.js
+>> middlewares
+>> module
+>> routes
+>> utils
+>>> error.js
+>>> logger.js
+>>> redis.js
+>> index.js
+> test
+
+## 
