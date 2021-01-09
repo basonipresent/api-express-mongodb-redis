@@ -1,0 +1,22 @@
+{
+  "name": "api-express-mongodb-redis",
+  "version": "1.0.0",
+  "description": "Backend Performance Optimization with Redis Caching, Node.JS, and MongoDB",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basonipresent/api-express-mongodb-redis.git"
+  },
+  "author": "fajar.basoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basonipresent/api-express-mongodb-redis/issues"
+  },
+  "homepage": "https://github.com/basonipresent/api-express-mongodb-redis#readme"
+}
