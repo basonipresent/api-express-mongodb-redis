@@ -12,9 +12,9 @@ const asyncErrorDecorator = func => (req, res, next) => {
     .catch(err => next(makeErrorOperational(err)));
 };
 
-modul.export = {
+module.exports = {
   STATUS_BAD_REQUEST,
   STATUS_INTERNAL_SERVER_ERROR,
   makeErrorOperational,
-  asyncErrorDecorator
+  asyncErrorDecorator,
 }

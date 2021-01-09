@@ -7,7 +7,7 @@ const rfs = require('rotating-file-stream');
 const levels = ['error', 'warn', 'info', 'verbose', 'debug', 'silly'];
 const level = levels.find(x => x === LOG_LEVEL) || 'error';
 
-const logger = new winston.Logger({
+const logger = new winston.createLogger({
   transports: [
     new winston.transports.Console({
       colorize: true,

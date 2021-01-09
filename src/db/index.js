@@ -31,7 +31,10 @@ const init = () => {
   });
 
   mongoose
-    .connect(DB_URL)
+    .connect(DB_URL, { 
+      useNewUrlParser: true, 
+      useUnifiedTopology: true 
+    })
     .then(() => {
       connected = true;
       logger.info('connected', { dispatcher: loggerDispatcher });

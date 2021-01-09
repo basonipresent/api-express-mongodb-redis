@@ -19,24 +19,37 @@ Backend Performance Optimization with Redis Caching, Node.JS, and MongoDB
 `npm init`
 
 ## install dependencies
-`npm install express mongoose redis helmet dotenv winston rotating-file-stream --save-dev`
+```
+npm install express body-parser mongoose redis --save
+npm install morgan helmet dotenv winston rotating-file-stream --save
+```
+
 
 ## create structure project
 ```js 
-var structureFolder = (
-<logs></>
+var structure = (
+<logs />
 <src>
   <app>
     <app.js />
     <config.js />
   </app>
-  <controllers />
+  <controllers>
+    <users.js />
+  </controllers>
   <db>
     <index.js />
   </db>
-  <middlewares />
-  <module />
-  <routes />
+  <middlewares>
+    <create-request-id.js />
+    <log.js />
+  </middlewares>
+  <models>
+    <user.js />
+  </models>
+  <routes>
+    <users.js />
+  </routes>
   <utils>
     <error.js />
     <logger.js />
