@@ -18,22 +18,26 @@ Npm 6.14.4              -Latest
 `npm install express mongoose redis helmet dotenv winston rotating-file-stream --save-dev`
 
 ## create structure project
-> logs
-> src
->> app
->>> app.js
->>> config.js
->> controllers
->> db
->>> index.js
->> middlewares
->> module
->> routes
->> utils
->>> error.js
->>> logger.js
->>> redis.js
->> index.js
+<logs></logs>
+<src>
+<app>
+  <app.js />
+  <config.js />
+</app>
+<controllers />
+<db>
+<index.js />
+</db>
+<middlewares />
+<module />
+<routes />
+<utils>
+<error.js />
+<logger.js />
+<redis.js />
+</utils>
+<index.js />
+</src>
 > test
 
 ## 
