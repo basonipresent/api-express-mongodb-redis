@@ -25,7 +25,7 @@ const requestStream =
 
 const request = morgan(format, {
   immediate: true,
-  stream: logPath,
+  stream: requestStream,
 });
 
 const responseOkStream =
@@ -48,7 +48,7 @@ const responseErrorStream =
       interval: '1d',
       path: logPath,
     });
-
+    
 const responseError = morgan(format, {
   skip: (req, res) => res.statusCode < 400,
   stream: responseErrorStream,

@@ -34,6 +34,8 @@ const init = () => {
   mongoose
     .connect(DB_URL, {
       useNewUrlParser: true,
+      useUnifiedTopology:true,
+      useCreateIndex: true,
     })
     .then(() => {
       connected = true;
