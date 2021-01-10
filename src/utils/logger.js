@@ -25,17 +25,19 @@ if (LOG_TO_FILE === true && isTest === false) {
     fs.mkdirSync(logsPath);
   }
 
-  logger.add(winston.transports.File, {
+  logger.add(new winston.transports.File({
+    filename: 'error.log',
     name: 'error-file',
     level: 'error',
-    stream: rfs('error.log', { interval: 'id', path: logsPath }),
-  });
+    stream: rfs.createStream('error.log', { interval: '1d', path: logsPath }),
+  }));
 
-  logger.add(winston.transports.File, {
+  logger.add(new winston.transports.File({
+    filename: 'warn.log',
     name: 'warn-file',
     level: 'warn',
-    stream: rfs('warn.log', { interval: '1d', path: logsPath }),
-  });
+    stream: rfs.createStream('warn.log', { interval: '1d', path: logsPath }),
+  }));
 }
 
 if (isTest === true) {

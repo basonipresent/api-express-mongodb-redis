@@ -18,8 +18,8 @@ morgan.token('new-line', () => EOL);
 const requestStream =
   LOG_TO_FILE === false || isTest === true
     ? process.stdout
-    : rfs('request.log', {
-      interval: 'id',
+    : rfs.createStream('request.log', {
+      interval: '1d',
       path: logPath,
     });
 
@@ -31,8 +31,8 @@ const request = morgan(format, {
 const responseOkStream =
   LOG_TO_FILE === false || isTest === true
     ? process.stdout
-    : rfs('response-error.log', {
-      interval: 'id',
+    : rfs.createStream('response-error.log', {
+      interval: '1d',
       path: logPath,
     });
 
@@ -44,9 +44,9 @@ const responseOk = morgan(format, {
 const responseErrorStream =
   LOG_TO_FILE === false || isTest === true
     ? process.stderr
-    : rfs('response-error.log', {
+    : rfs.createStream('response-error.log', {
       interval: '1d',
-      path: logsPath,
+      path: logPath,
     });
 
 const responseError = morgan(format, {

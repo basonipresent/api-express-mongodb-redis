@@ -17,6 +17,7 @@ const init = () => {
     });
 
     mongoose.connection.on('disconnected', () => {
+      connected = false;
       logger.warn('disconnected', { dispatcher: loggerDispatcher });
     });
 
@@ -31,9 +32,8 @@ const init = () => {
   });
 
   mongoose
-    .connect(DB_URL, { 
-      useNewUrlParser: true, 
-      useUnifiedTopology: true 
+    .connect(DB_URL, {
+      useNewUrlParser: true,
     })
     .then(() => {
       connected = true;
