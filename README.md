@@ -66,5 +66,8 @@ var structure = (
 
 ## demo
 ### result without cache
-
+![alt text](https://github.com/basonipresent/api-express-mongodb-redis/blob/main/test/result/res-no-cache-1.jpeg?)
+![alt text](https://github.com/basonipresent/api-express-mongodb-redis/blob/main/test/result/res-no-cache-2.jpeg)
 ### result with cache
+![alt text](https://github.com/basonipresent/api-express-mongodb-redis/blob/main/test/result/res-cache-1.jpeg)
+![alt text](https://github.com/basonipresent/api-express-mongodb-redis/blob/main/test/result/res-cache-2.jpeg)
