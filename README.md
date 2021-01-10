@@ -71,3 +71,7 @@ var structure = (
 ### result from redis-cache
 ![alt text](https://github.com/basonipresent/api-express-mongodb-redis/blob/main/test/result/res-cache-1.jpeg)
 ![alt text](https://github.com/basonipresent/api-express-mongodb-redis/blob/main/test/result/res-cache-2.jpeg)
+
+## references
+NodeJS + Redis = Improved Performance,  https://medium.com/analytics-vidhya/nodejs-redis-improved-performance-3ad9b3a1589d
+https://github.com/craighillwood/rest-api-express-mongodb-redis
