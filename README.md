@@ -1,6 +1,12 @@
 # api-express-mongodb-redis
 Backend Performance Optimization with Redis Caching, Node.JS, and MongoDB
 
+## what is backend application?
+
+## what is cache?
+
+## architecture backend with caching
+
 ## required stack
 > Redis server v=5.0.7    -Latest
 
@@ -11,19 +17,16 @@ Backend Performance Optimization with Redis Caching, Node.JS, and MongoDB
 > Npm 6.14.4              -Latest
 
 
-## what is restful api?
-
-## what is caching?
-
 ## create node project
-`npm init`
+```
+npm init
+```
 
 ## install dependencies
 install dependencies from package.json
 ```
 npm install
 ```
-
 
 ## create structure project
 ```js 
@@ -61,4 +64,7 @@ var structure = (
 );
 ```
 
-## 
+## demo
+### result without cache
+
+### result with cache
