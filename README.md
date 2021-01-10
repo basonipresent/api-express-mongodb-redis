@@ -19,9 +19,9 @@ Backend Performance Optimization with Redis Caching, Node.JS, and MongoDB
 `npm init`
 
 ## install dependencies
+install dependencies from package.json
 ```
-npm install express body-parser mongoose redis --save
-npm install morgan helmet dotenv winston rotating-file-stream --save
+npm install
 ```
 
 
