@@ -15,6 +15,6 @@ router.post('/', jsonParser, asyncErrorDecorator(usersController.create));
 // update user by id
 router.put('/:id', jsonParser, asyncErrorDecorator(usersController.updateById));
 // delete user by id
-router.delete('/', asyncErrorDecorator(usersController.deleteById));
+router.delete('/:id', asyncErrorDecorator(usersController.deleteById));
 
 module.exports = router;

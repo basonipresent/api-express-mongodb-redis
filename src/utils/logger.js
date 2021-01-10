@@ -26,14 +26,14 @@ if (LOG_TO_FILE === true && isTest === false) {
   }
 
   logger.add(new winston.transports.File({
-    filename: 'error.log',
+    filename: `${logsPath}/error.log`,
     name: 'error-file',
     level: 'error',
     stream: rfs.createStream('error.log', { interval: '1d', path: logsPath }),
   }));
 
   logger.add(new winston.transports.File({
-    filename: 'warn.log',
+    filename: `${logsPath}/warn.log`,
     name: 'warn-file',
     level: 'warn',
     stream: rfs.createStream('warn.log', { interval: '1d', path: logsPath }),
