@@ -18,18 +18,25 @@ Kecepatan situs web memberikan kesan pertama tentang sebuah bisnis.
 *"Penting untuk dipahami bahwa Anda tidak akan mendapatkan kesempatan kedua dalam hal pengalaman pengguna."* 
 Kecepatan situs web yang rendah menjadi salah satu faktor yang mempengaruhi orang-orang berfikir tentang sumber daya yang dimiliki pada bisnis tersebut.
 
-### ways
+Menurut penelitian Hubspot, *penundaan 1 detik berarti pengurangan konversi sebesar 7 persen. Misalnya, pelambatan halaman selama 1 detik dapat menghabiskan penjualan Amazon $ 1,6 miliar setiap tahun.*
+
+### tips and technologies to optimization performance in node.js
+1. Caching Your App with Redis **
+2. Make sure your query is Optimized
+3. Check All Error Scripts with Logging
+4. Implement HTTP/2
+5. Clustering Your Node .js
+6. Use Realtime App Monitor to Analysis your App
 
 ## what is cache?
 
 ## architecture backend with caching
 
 ## required
-* Redis server v=5.0.7    -Latest
-* MongoDB                 -Latest
-* Node v10.19.0           -Latest
-* Npm 6.14.4              -Latest
-
+* Redis server
+* MongoDB
+* Node
+* Npm
 
 ## create node project
 ```
@@ -92,3 +99,4 @@ var structure = (
 * https://github.com/craighillwood/rest-api-express-mongodb-redis
 * Tips and Techniques to Speed Up and Improve Your Node.js Performance, 
   https://medium.com/skyshidigital/6-tricks-to-speed-up-and-improve-your-node-js-performance-fadc06d15cbe
+* How Page Load Time Affects Conversion Rates: 12 Case Studies [Infographic], https://blog.hubspot.com/marketing/page-load-time-conversion-rates
