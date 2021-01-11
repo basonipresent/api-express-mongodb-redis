@@ -29,8 +29,13 @@ Menurut penelitian Hubspot, *penundaan 1 detik berarti pengurangan konversi sebe
 6. Use Realtime App Monitor to Analysis your App
 
 ## what is cache?
+Cache dapat diartikan sebagai sebuah kegiatan dimana Anda menggunakan kembali data dari permintaan sebelumnya dengan tujuan mempercepat permintaan di waktu yang akan datang.
 
-## architecture backend with caching
+### type of caching
+Secara luas, ada dua jenis proses caching – server dan browser. Browser caching dilakukan di sisi client (user), sementara caching server dilakukan di server.
+
+## architecture backend with caching (server-side caching) 
+![alt text](https://miro.medium.com/max/4328/1*9eGjwJJQ9z77xFaUqF2hGw.png)
 
 ## required
 * Redis server
