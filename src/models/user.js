@@ -60,11 +60,11 @@ userSchema.statics.getAll = async function userGetAll() {
     logger.error(err, { dispatcher: loggerDispatcher, from: 'userGetAll' });
   }
 
-  if (data){
+  if (data) {
     console.log('get data from redis');
     return JSON.parse(data);
   }
-  data = await this.find().sort( { firstName: 1 } ).exec();
+  data = await this.find().sort({ firstName: 1 }).exec();
 
   try {
     redis.client.set('users', JSON.stringify(data), 'EX', 60);
@@ -74,6 +74,31 @@ userSchema.statics.getAll = async function userGetAll() {
 
   return data;
 };
+
+userSchema.statics.getById = (id) = async function userGetById(id) {
+  let data;
+
+  try {
+    data = await redis.getAsync(`${id}`);
+  } catch (err) {
+    logger.error(err, { dispatcher: loggerDispatcher, from: 'userGetById' });
+  }
+
+  if (data) {
+    console.log(`get data redis from key ${id}`);
+    return JSON.parse(data);
+  }
+
+  data = await this.find({ _id: id }).exec();
+
+  try {
+    redis.client.set(id, JSON.stringify(data), 'EX', 60);
+  } catch (err) {
+    logger.error(err, { dispatcher: loggerDispatcher, from: 'userGetById' });
+  }
+
+  return data;
+}
 
 const User = mongoose.model('User', userSchema, 'users');
 

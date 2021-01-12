@@ -10,6 +10,8 @@ const REDIS_PORT = process.env.REDIS_PORT;
 
 /* eslint-disable no-trailing-spaces */
 const config = {
+  /* APP */
+  APP_NAME: process.env.APP_NAME,
   /* ENV */
   isDev: process.env.NODE_ENV === 'development',
   isTest: process.env.NODE_ENV === 'test',

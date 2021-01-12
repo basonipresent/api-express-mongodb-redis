@@ -1,4 +1,4 @@
-const { isDev, isTest, isProd } = require('./config');
+const { isDev, isTest, isProd, APP_NAME } = require('./config');
 const express = require('express');
 const helmet = require('helmet');
 const { makeErrorOperational, STATUS_INTERNAL_SERVER_ERROR } = require('../utils/error');
@@ -33,6 +33,12 @@ if (isTest === false) {
 
 // routes
 app.use('/users', usersRoute);
+
+// welcome
+app.use('/', (req, res) => {
+  res.status(200).send({status: 200,
+  message: APP_NAME})
+});
 
 // 404 error handler
 app.use((req, res, next) => {

@@ -11,7 +11,8 @@ const getAll = async (req, res) => {
 
 const getById = async (req, res) => {
   const {id} = req.params;
-  const user = await User.findById(id).exec();
+  // const user = await User.findById(id).exec();
+  const user = await User.getById(id);
   const status = user === null ? 404 : 200;
 
   res.status(status).send({
