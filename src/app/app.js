@@ -1,14 +1,17 @@
-const { isDev, isTest, isProd, APP_NAME } = require('./config');
-const express = require('express');
-const helmet = require('helmet');
-const { makeErrorOperational, STATUS_INTERNAL_SERVER_ERROR } = require('../utils/error');
-const logger = require('../utils/logger');
-const createRequestId = require('../middlewares/create-request-id');
-const log = require('../middlewares/log');
-const db = require('../db');
-const usersRoute = require('../routes/users');
+const { isDev, isTest, isProd, APP_NAME } = require("./config");
+const express = require("express");
+const helmet = require("helmet");
+const {
+  makeErrorOperational,
+  STATUS_INTERNAL_SERVER_ERROR,
+} = require("../utils/error");
+const logger = require("../utils/logger");
+const createRequestId = require("../middlewares/create-request-id");
+const log = require("../middlewares/log");
+const db = require("../db");
+const usersRoute = require("../routes/users");
 
-const loggerDispatcher = 'App';
+const loggerDispatcher = "App";
 
 if (isTest === false) {
   db.init();
@@ -23,7 +26,7 @@ if (isTest === false) {
   app.use([log.request, log.responseOk, log.responseError]);
   app.use((req, res, next) => {
     if (db.connected === false) {
-      const err = new Error('Could not connect to the database');
+      const err = new Error("Could not connect to the database");
       next(makeErrorOperational(err, STATUS_INTERNAL_SERVER_ERROR));
     } else {
       next();
@@ -32,23 +35,22 @@ if (isTest === false) {
 }
 
 // routes
-app.use('/users', usersRoute);
+app.use("/users", usersRoute);
 
 // welcome
-app.use('/', (req, res) => {
-  res.status(200).send({status: 200,
-  message: APP_NAME})
+app.use("/", (req, res) => {
+  res.status(200).send({ status: 200, message: APP_NAME });
 });
 
 // 404 error handler
 app.use((req, res, next) => {
-  const err = new Error('Not Found');
+  const err = new Error("Not Found");
   next(makeErrorOperational(err, 404));
 });
 
 // error handler
 app.use((err, req, res, next) => {
-  console.log('last resort', err);
+  console.log("last resort", err);
   const status = parseInt(err.status, 10) || STATUS_INTERNAL_SERVER_ERROR;
   const response = {
     status,

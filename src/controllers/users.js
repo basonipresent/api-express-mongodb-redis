@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require("../models/user");
 
 const getAll = async (req, res) => {
   const users = await User.getAll();
@@ -10,7 +10,7 @@ const getAll = async (req, res) => {
 };
 
 const getById = async (req, res) => {
-  const {id} = req.params;
+  const { id } = req.params;
   // const user = await User.findById(id).exec();
   const user = await User.getById(id);
   const status = user === null ? 404 : 200;
@@ -30,7 +30,10 @@ const create = async (req, res) => {
 };
 
 const updateById = async (req, res) => {
-  const { body, params: { id } } = req;
+  const {
+    body,
+    params: { id },
+  } = req;
   const user = await User.findByIdAndUpdate(id, body).exec();
 
   res.send({

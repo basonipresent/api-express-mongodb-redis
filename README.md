@@ -10,22 +10,22 @@ Back-end adalah bagian yang berjalan di belakang layar dari sebuah aplikasi berb
 
 ### backend technologies stack elements
 
-* Programming languages: Beberapa contohnya adalah JavaScript, PHP, Python, dan Ruby.
-* Framework: Node.js, Laravel, Django, dan Ruby on Rails adalah beberapa kerangka kerja yang populer.
-* Server: Server pada backend untuk mengelola permintaan klien. Apache, Nginx, dan Microsoft's Internet Information Server (IIS) adalah contoh server web yang bagus.
-* Database: Ini adalah ruang digital untuk menyimpan data (dokumen kata, halaman web, file MP3). MongoDB, PostgreSQL, dan MySQL adalah database yang umum.
+- Programming languages: Beberapa contohnya adalah JavaScript, PHP, Python, dan Ruby.
+- Framework: Node.js, Laravel, Django, dan Ruby on Rails adalah beberapa kerangka kerja yang populer.
+- Server: Server pada backend untuk mengelola permintaan klien. Apache, Nginx, dan Microsoft's Internet Information Server (IIS) adalah contoh server web yang bagus.
+- Database: Ini adalah ruang digital untuk menyimpan data (dokumen kata, halaman web, file MP3). MongoDB, PostgreSQL, dan MySQL adalah database yang umum.
 
 ## why we should optimization performance on backend?
 
 Kecepatan situs web memberikan kesan pertama tentang sebuah bisnis.
-*"Penting untuk dipahami bahwa Anda tidak akan mendapatkan kesempatan kedua dalam hal pengalaman pengguna."*
+_"Penting untuk dipahami bahwa Anda tidak akan mendapatkan kesempatan kedua dalam hal pengalaman pengguna."_
 Kecepatan situs web yang rendah menjadi salah satu faktor yang mempengaruhi orang-orang berfikir tentang sumber daya yang dimiliki pada bisnis tersebut.
 
-Menurut penelitian Hubspot, *penundaan 1 detik berarti pengurangan konversi sebesar 7 persen. Misalnya, pelambatan halaman selama 1 detik dapat menghabiskan penjualan Amazon $ 1,6 miliar setiap tahun.*
+Menurut penelitian Hubspot, _penundaan 1 detik berarti pengurangan konversi sebesar 7 persen. Misalnya, pelambatan halaman selama 1 detik dapat menghabiskan penjualan Amazon $ 1,6 miliar setiap tahun._
 
 ### tips and technologies to optimization performance in node.js
 
-1. Caching Your App with Redis **
+1. Caching Your App with Redis \*\*
 2. Make sure your query is Optimized
 3. Check All Error Scripts with Logging
 4. Implement HTTP/2
@@ -46,10 +46,10 @@ Secara luas, ada dua jenis proses caching – server dan browser. Browser cachin
 
 ## required
 
-* Redis server
-* MongoDB
-* Node
-* Npm
+- Redis server
+- MongoDB
+- Node
+- Npm
 
 ## create node project
 
@@ -116,9 +116,9 @@ var structure = (
 
 ## references
 
-* NodeJS + Redis = Improved Performance,  
+- NodeJS + Redis = Improved Performance,  
   <https://medium.com/analytics-vidhya/nodejs-redis-improved-performance-3ad9b3a1589d>
-* <https://github.com/craighillwood/rest-api-express-mongodb-redis>
-* Tips and Techniques to Speed Up and Improve Your Node.js Performance,
+- <https://github.com/craighillwood/rest-api-express-mongodb-redis>
+- Tips and Techniques to Speed Up and Improve Your Node.js Performance,
   <https://medium.com/skyshidigital/6-tricks-to-speed-up-and-improve-your-node-js-performance-fadc06d15cbe>
-* How Page Load Time Affects Conversion Rates: 12 Case Studies [Infographic], <https://blog.hubspot.com/marketing/page-load-time-conversion-rates>
+- How Page Load Time Affects Conversion Rates: 12 Case Studies [Infographic], <https://blog.hubspot.com/marketing/page-load-time-conversion-rates>

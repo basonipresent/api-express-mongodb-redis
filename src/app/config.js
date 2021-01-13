@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 const DB_PROTOCOL = process.env.DB_PROTOCOL;
 const DB_HOST = process.env.DB_HOST;
@@ -13,9 +13,9 @@ const config = {
   /* APP */
   APP_NAME: process.env.APP_NAME,
   /* ENV */
-  isDev: process.env.NODE_ENV === 'development',
-  isTest: process.env.NODE_ENV === 'test',
-  isProd: process.env.NODE_ENV === 'production',
+  isDev: process.env.NODE_ENV === "development",
+  isTest: process.env.NODE_ENV === "test",
+  isProd: process.env.NODE_ENV === "production",
 
   /* SERVER */
   PORT: parseInt(process.env.PORT, 10) || 3000,
@@ -34,7 +34,7 @@ const config = {
 
   /* LOG */
   LOG_LEVEL: process.env.LOG_LEVEL,
-  LOG_TO_FILE: process.env.LOG_TO_FILE === 'true',
+  LOG_TO_FILE: process.env.LOG_TO_FILE === "true",
 };
 
 module.exports = config;
